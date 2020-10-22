@@ -13,7 +13,7 @@ public class MyStructure implements IMyStructure {
     @Override
     public INode findByCode(String code) {
         if (code == null){
-            throw new IllegalArgumentException("Code not found");
+            throw new IllegalArgumentException("Code is null");
         }
         return findCodeOrRendererFromListByPredicate(c -> c.getCode().equals(code));
     }
@@ -21,7 +21,7 @@ public class MyStructure implements IMyStructure {
     @Override
     public INode findByRenderer(String renderer) {
         if (renderer == null){
-            throw new IllegalArgumentException("Renderer not found");
+            throw new IllegalArgumentException("Renderer is null");
         }
         return findCodeOrRendererFromListByPredicate(r -> r.getRenderer().equals(renderer));
     }
